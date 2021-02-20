@@ -32,7 +32,7 @@ class CalendarsController < ApplicationController
     7.times do |x|
       today_plans = []
       plans.each do |plan|
-        today_plans.push(Plan.plan) if Plan.date == @todays_date + x
+        today_plans.push(plan.plan) if plan.date == @todays_date + x
       end
 
       wday_num = @todays_date.wday + x
